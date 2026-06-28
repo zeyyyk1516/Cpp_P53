@@ -1,19 +1,15 @@
+
 #include <iostream>
 #include <Windows.h>
 #include <cmath>
+#include "function.h"
+#include <iomanip>
+
+#include <conio.h>;
+
 
 using namespace std;
 
-enum Color
-{
-	Black = 0, Blue = 1, Green = 2, Cyan = 3, Red = 4, Magenta = 5, Brown = 6, LightGray = 7, DarkGray = 8,
-	LightBlue = 9, LightGreen = 10, LightCyan = 11, LightRed = 12, LightMagenta = 13, Yellow = 14, White = 15
-};
-
-void SetColor(int text, int background)
-{
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (WORD)((background << 4) | text));
-};
 
 int main()
 {
@@ -21,12 +17,347 @@ int main()
 	SetConsoleOutputCP(65001);
 	cout.setf(ios::boolalpha);
 
-	SetColor(Red, Black);
+	SetColor(White, Black);
+	srand(time(0));
+	//dz 9.1
+	/*int M, N, sizeC;
+	//Дано два масиви: А[M] і B[N] (M і N вводяться з клавіатури). 
+	//Необхідно створити третій масив мінімально можливого розміру, 
+	//у якому потрібно зібрати елементи масиву A,
+	//що не включаються в масив B, без повторень. 
+
+	cout << "Введіть розмір масиву A: ";
+	cin >> M;
+	int* A = new int[M];
+	setArray(A, M);
+	cout << "Введіть розмір масиву B: ";
+	cin >> N;
+	int* B = new int[N];
+	setArray(B, N);
+	cout << "Масив A: ";
+	printArray(A, M);
+	cout << "Масив B: ";
+	printArray(B, N);
+	int* C = findUniqueElements(A, M, B, N, &sizeC);
+	cout << "Масив C: ";
+	printArray(C, sizeC);
+	delete[] A, B, C;*/
+
+	//dz 9.2
+	//Дано два масиви: А[M] і B[N] (M і N вводяться з клавіатури).
+	//Необхідно створити третій масив мінімально можливого розміру,
+	//в якому потрібно зібрати елементи масивів A і B, 
+	//які не є спільними для них, без повторень.
+
+	/*int M, N, sizeC;
+	cout << "Введіть розмір масиву A: ";
+	cin >> M;
+	int* A = new int[M];
+	setArray(A, M);
+	cout << "Введіть розмір масиву B: ";
+	cin >> N;
+	int* B = new int[N];
+	setArray(B, N);
+	cout << "Масив A: ";
+	printArray(A, M);
+	cout << "Масив B: ";
+	printArray(B, N);
+	int* C = findArrayElDifference(A, M, B, N, &sizeC);
+	cout << "Масив C: ";
+	printArray(C, sizeC);
+	delete[] A, B, C;*/
+
+
+	
+
+
+
+
+
+
+	////lesson 10, 11, 12
+
+
+	//int row, col;
+	//cin >> row >> col;
+	//int** p = nullptr;
+	//createArrray(p, row, col);
+	//setArray(p, row, col);
+	//printArray(p, row, col);
+	//adddRowInEnd(p, row, col);
+	//printArray(p, row, col);
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//const int* p_size = &size;
+	//int arr1[size];
+
+	//int len = 3500;
+	//void(*director)() = prorab(len);
+	//director();
+
+	//int* res = SumProdValueArray(arr, size);
+
+	//int ammos[] = { 25, 50, 10 };
+	//void(*shoot)(int*) = selectWeapon(ammos);
+	//shoot(ammos);
+
+
+
+	/*setArray(arr, size);
+	printArray(arr, size);
+
+	for (int i = size - 1; i >= 0; i--)
+	{
+		cout << *(arr + i) << " ";
+	}*/
+
+	//int* p = new int[size];
+	//setArray(p, size);
+	//printArray(p, size);
+	//int* temp = new int[size + 1];
+	/*
+	for (size_t i = 0; i < size; i++)
+	{
+		temp[i] = p[i];
+	}
+	temp[size] = 999;
+	delete[] p;
+	p = temp;
+	size++;
+	printArray(p, size);*/
+
+
+	//AppendInArray(arr, size, 20);
+	//printArray(arr, size);
+	//lesson 9
+	//int a = 5;
+	//cout << typeid(a).name() << endl;
+	//cout << &a << endl;
+	//cout << sizeof(a) << endl;
+
+
+
+	//lesson 8
+	/*const int size = 10;
+	int arr[size];
+
+	setArray(arr, size, 0, 10);
+
+	printArray(arr, size);
+
+	sortArray(arr, size);*/
+	//cout << endl;
+	//starLine();
+	//findArray(arr, size, 5);
+	//printArray(arr, size);
+	//starLine();
+	//cout << maxValueArray(arr, size) << endl;
+	//starLine();
+	//cout << countValueArray(arr, size, 5) << endl;
+	//starLine();
+	//cout << sumValueArray(arr, size) << endl;
+	//lesson 7
+	/*const int size = 10;
+	int arr[size];*/
+
+	/*starLine();
+	starLine(20);
+	starLine(10, '*');*/
+
+	/*setArray(arr, size, 0, 10);
+
+	printArray(arr, size);
+
+	sortArray(arr, size);
+
+	printArray(arr, size);*/
+
+	//cout << findArray(arr, size, 5) << endl;
+
+	//mid(1, 2, 3);
+
+
+
+
+
+	//lesson 6
+
+	/*const int row = 5, col = 5;
+	int a[row][col];
+	int min = 0, max = 9, maxValue, minValue, sum;
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < col; j++)
+		{
+			bool flag = false;
+			while (!flag)
+			{
+				int r = rand() % (max - min + 1) + min;
+				for (size_t k = 0; k < row; k++)
+				{
+					for (size_t m = 0; m < col; m++)
+					{
+						if (a[k][m] == r)
+						{
+							flag = true;
+						}
+					}
+				}
+				if (!flag)
+				{
+					a[i][j] = r;
+					break;
+
+				}
+				flag = false;
+			}
+		}
+
+	}
+	maxValue = a[0][0];
+	minValue = a[0][0];
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < col; j++)
+		{
+			if (a[i][j] > maxValue)
+			{
+				maxValue = a[i][j];
+			}
+			if (a[i][j] < minValue)
+			{
+				minValue = a[i][j];
+			}
+		}
+	}
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < col; j++)
+		{
+			if (a[i][j] == maxValue)
+			{
+				SetColor(Red, Black);
+			}
+			else if(a[i][j] == minValue)
+			{
+				SetColor(Green, Black);
+			}
+			else
+			{
+				SetColor(White, Black);
+			}
+			cout << a[i][j] << " ";
+		}
+		cout << endl;
+	}
+	*/
+
+
+
+
+
+
+	//lesson 4,5
+	/*const int size = 10;
+	int a[size];
+	int min = 0, max = 10;
+
+
+	for (size_t i = 0; i < size; i++)
+	{
+		a[i] = rand() % (max - min + 1) + min;
+	}
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << a[i] << " ";
+	}
+
+	cout << endl;*/
+
+
+
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	int t = a[0];
+	//	a[0] = a[size - 1];
+	//	a[size - 1] = t;
+	//	
+	//}
+	/*for (long long i = size - 1; i >= 0; i--)
+	{
+		cout << a[i] << " ";
+	}*/
+
+	/*for (size_t j = 0; j < size - 1; j++)
+	{
+		for (size_t i = 0; i < size - 1 - j; i++)
+		{
+			if (a[j] < a[j + 1])
+			{
+				int t = a[j];
+				a[j] = a[size - 1 - j];
+				a[size - 1 - j] = t;
+			}
+		}
+	}
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << a[i] << " ";
+	}*/
+
+
+
+
+
+
+	//int a, sum;
+	//a = 0;
+	//sum = 0;
+
+	//do
+	//{
+	//	cin >> a;
+	//	sum += a;
+	//} while (a != 0);
+	//{
+	//	sum += a;
+	//	cout << sum;
+	//}
+
+	/*cin >> a;
+	//while (a != 0);
+	{
+		cin >> a;
+		sum += a;
+		cout << sum;
+	}*/
+
+
+
+
+
+
+
 	//cout << "a" <, endl;
 
 	//type name;
 	//int 4b
-	//double
+	//double 
 	//float x, y;
 
 	//cin >> x;
@@ -49,39 +380,39 @@ int main()
 
 
 	if (a > b and a >c) {
-	cout << a << endl;
+		cout << a << endl;
 
 	}
 	else if(b > a and b > c) {
-	cout << b << endl;
+		cout << b << endl;
 
 	}
 	else if (c > a and c > b) {
-	cout << c << endl;
+		cout << c << endl;
 
 	}
 	else {
-	cout
+		cout
 	}*/
 
 	/*int a, b;
 	char c;
 	cin >> a >> c >> b;*/
 	/*if (c == '+') {
-	cout << a + b << endl;
+		cout << a + b << endl;
 	}
 	else if (c == '-')
 	{
-	cout << a - b << endl;
+		cout << a - b << endl;
 	}
 	else if (c == '*') {
-	cout << a * b << endl;
+		cout << a * b << endl;
 	}
 	else if (c == '/') {
-	cout << a / b << endl;
+		cout << a / b << endl;
 	}
 	else {
-	cout << "wrong operator" << endl;
+		cout << "wrong operator" << endl;
 	}*/
 	/*int a;
 	cin >> a;
@@ -94,23 +425,23 @@ int main()
 
 	case 6: case 7: case 8: cout << "summer" << endl; break;
 	default:
-	cout << "wrong number" << endl;
+		cout << "wrong number" << endl;
 	}*/
 	/*switch (c) {
-	case
-	'+': cout << a + b << endl;
-	break;
-	case '-':
-	cout << a - b << endl;
-	break;
-	case '*':
-	cout << a * b << endl;
-	break;
-	case '/':
-	cout << a / b << endl;
-	break;
-	default:
-	cout << "wrong operator" << endl;
+		case
+		'+': cout << a + b << endl;
+			break;
+		case '-':
+			cout << a - b << endl;
+			break;
+		case '*':
+			cout << a * b << endl;
+			break;
+		case '/':
+			cout << a / b << endl;
+			break;
+		default:
+			cout << "wrong operator" << endl;
 	}*/
 	/*int a;
 	cin >> a;
@@ -125,188 +456,83 @@ int main()
 	}
 	else if (a == 6 || a == 7 || a == 8) {
 		cout << "summer" << endl;
-	}*/
+	}
+	*/
+
+	//lesson 3
+		/*float price, kg;
+		cin >> price;
+		kg = 0.10;
+
+		for (size_t i = 1; i <= 10; i++)
+		{
+
+			cout << " kg " << kg << " price " << price * kg << endl;
+			kg += 0.1;
+
+		}*/
+		/*float a;
+		int n;
+		cin >> a >> n;
+		for (size_t i = 0; i <= n; i++)
+		{
+			cout << a << endl;
+
+		}*/
+		/*cout << " Mo Tu We Th Fr";
+		SetColor(LightRed, White);
+		cout << " Sa Su" << endl;
+		SetColor(Black, White);
+		for (size_t i = 1; i <=31; i++)
+		{
+			if (i % 7 == 6 || i % 7 == 0)
+			{
+				SetColor(LightRed, White);
+			}
+			cout << setw(3) << i ;
+			SetColor(Black, White);
+
+			if (i % 7 == 0)
+			{
+				cout << endl;
+			}
+
+		}*/
+		/*cout << " Mo Tu We Th Fr";
+		SetColor(LightRed, White);
+		cout << " Sa Su" << endl;
+		SetColor(Black, White);
+		int k = 4;
+
+		for (int i = 1 - k; i <= 31; i++)
+		{
+			if (i <= 0)
+			{
+				cout << "   ";
+			}
+			if ((i+k) % 7 == 2 || (i+k) % 7 == 3)
+			{
+				SetColor(LightRed, White);
+			}
+			cout << setw(3) << i;
+			SetColor(Black, White);
+
+			if ((i+k) % 7 == 3)
+			{
+				cout << endl;
+			}
 
 
 
-/*//hometask 1.1
-	int sec, hours, min, rem_sec;
-	cout << "Введіть час в секундах:" << endl;
-	cin >> sec;
-	hours = sec / 3600;
-	rem_sec = sec % 3600;
-	min = rem_sec / 60;
-	rem_sec = rem_sec % 60;
-	cout << hours << " год. " << min << " хв. " << rem_sec << " сек." << endl;
+		}*/
 
 
-//hometask 1.2
-	float num;
-	int hrn, kop;
-	cout << "Введіть дробове число для перетворення його в грошовий формат:" << endl;
-	cin >> num;
-	hrn = num;
-	kop = (num - hrn) * 100;
-	cout << hrn << " грн " << kop << " коп." << endl;
 
 
-//hometask 1.3
-	float distance, input_time, speed_km, speed_m;
-	int time, min, sec;
-	cout << "Обчислення швидкості бігу." << endl;
-	cout << "Введіть довжину дистанції (метрів) = ";
-	cin >> distance;
-	cout << "Введіть час (хв.сек) = ";
-	cin >> input_time;	
-
-	min = input_time;
-	sec = (input_time - min) * 100;
-	time = min * 60 + sec;
-	speed_m = distance / time;
-	speed_km = speed_m * 3.6;
-
-	cout << "Дистанція: " << distance << " м." << endl;
-	cout << "Час: " << min << " хв " << sec << " сек = " << time << " сек." << endl;
-	cout << "Ви бігли зі швидкістю " << speed_km << " км/год." << endl;
-
-//hometask 1.4
-	int total_days, weeks, remaining_days;
-	cout << "Введіть кількість днів: ";
-	cin >> total_days;
-	weeks = total_days / 7;
-	remaining_days = total_days % 7;
-	cout << weeks << " тижні і " << remaining_days << " дні." << endl;*/
-	
 
 
-//hometask 2.1
-/*	int day1,month1,year1, day2, month2,year2,totalDays1, totalDays2, difference;
-	bool isLeap1, isLeap2;
-	cout << "Введіть першу дату (день місяць рік (у вигляді цілих чисел)):" << endl;
-	cin >> day1 >> month1 >> year1;
-	cout << "Введіть другу дату (день місяць рік (у вигляді цілих чисел)):" << endl;
-	cin >> day2 >> month2 >> year2;
 
 
-	if (year1 % 400 == 0) {        
-		isLeap1 = true;
-	}
-	else if (year1 % 100 == 0) {   
-		isLeap1 = false;
-	}
-	else if (year1 % 4 == 0) {     
-		isLeap1 = true;
-	}
-	else {
-		isLeap1 = false;
-	}
-
-	if (year2 % 400 == 0)
-	{
-		isLeap2 = true;
-	}
-	else if (year2 % 100 == 0)
-	{
-		isLeap2 = false;
-	}
-	else if (year2 % 4 == 0)
-	{
-		isLeap2 = true;
-	}
-	else
-	{
-		isLeap2 = false;
-	}
-
-
-	totalDays1 = 365 * (year1-1) + (year1 - 1) / 4 - (year1 - 1) / 100 + (year1 - 1) / 400 + day1;
-	totalDays2 = 365 * (year2-1) + (year2 - 1) / 4 - (year2 - 1) / 100 + (year2 - 1) / 400 + day2;
-
-	switch (month1) {
-		case 12: totalDays1 += 30;
-		case 11: totalDays1 += 31;
-		case 10: totalDays1 += 30;
-		case 9: totalDays1 += 31;
-		case 8: totalDays1 += 31;
-		case 7: totalDays1 += 30;
-		case 6: totalDays1 += 31;
-		case 5: totalDays1 += 30;
-		case 4: totalDays1 += 31;
-		case 3: totalDays1 += (isLeap1 ? 29 : 28);
-		case 2: totalDays1 += 31;
-		case 1: break;
-	}
-	switch (month2) {
-			case 12: totalDays2 += 30;
-			case 11: totalDays2 += 31;
-			case 10: totalDays2 += 30;
-			case 9: totalDays2 += 31;
-			case 8: totalDays2 += 31;
-			case 7: totalDays2 += 30;
-			case 6: totalDays2 += 31;
-			case 5: totalDays2 += 30;
-			case 4: totalDays2 += 31;
-			case 3: totalDays2 += (isLeap2 ? 29 : 28);
-			case 2: totalDays2 += 31;
-			case 1: break;
-	}
-	difference = abs(totalDays1 - totalDays2); 
-	cout << "Кількість днів між датами: " << difference << endl;*/
-//hometask 2.2
-
-	double sales1, sales2, sales3,salary1,salary2,salary3;
-	cout << "Введіть рівень продажів для трьох менеджерів:" << endl;
-	cin >> sales1 >> sales2 >> sales3;
-		
-	if (sales1 < 500) {
-		salary1 = 200 + sales1 *0.03;
-	}
-	else if (sales1 <= 1000) {
-		salary1 = 200 + sales1 *0.05;
-	}
-	else {
-		salary1 = 200 + sales1*0.08;
-	}
-	if (sales2 < 500) {
-		salary2 = 200 + sales2 * 0.03;
-	}
-	else if (sales2 <= 1000) {
-		salary2 = 200 + sales2 * 0.05;
-	}
-	else {
-		salary2 = 200 + sales2 * 0.08;
-	}
-	if (sales3 < 500) {
-		salary3 = 200 + sales3 * 0.03;
-	}
-	else if (sales3 <= 1000) {
-		salary3 = 200 + sales3 * 0.05;
-	}
-	else {
-		salary3 = 200 + sales3 * 0.08;
-	}
-	if (sales1 > sales2 && sales1 > sales3)
-	{
-		salary1 += 200;
-		cout << "Найкращий менеджер: 1" << endl;
-	}
-	else if (sales2 > sales1 && sales2 > sales3)
-	{
-		salary2 += 200;
-		cout << "Найкращий менеджер: 2" << endl;
-	}
-	else if (sales3 > sales1 && sales3 > sales2)
-	{
-		salary3 += 200;
-		cout << "Найкращий менеджер: 3" << endl;
-	}
-	else
-	{
-		cout << "Немає найкращого менеджера" << endl;
-	}
-	cout << "Зарплата менеджера 1: " << salary1 << endl;
-	cout << "Зарплата менеджера 2: " << salary2 << endl;
-	cout << "Зарплата менеджера 3: " << salary3 << endl;
 	return 0;
-	
 }
+

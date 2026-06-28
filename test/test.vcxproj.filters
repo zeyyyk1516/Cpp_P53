@@ -1,28 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Step_project">
+      <UniqueIdentifier>{dc33806a-56dd-47c3-846f-11c0055e0716}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
+    <Filter Include="Step_project\Hometask9">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Step_project\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Source Files\main">
+    <Filter Include="Step_project\Source Files\main">
       <UniqueIdentifier>{2ed35f71-4616-4cb8-b7bf-416c5d8927da}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\hometasks">
-      <UniqueIdentifier>{1000c0b4-5ada-47f0-a9e7-cf8763fff250}</UniqueIdentifier>
+    <Filter Include="Step_project\Header">
+      <UniqueIdentifier>{a0b8082e-9da9-4da4-bd42-0c6f232ebefb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hometask2.cpp">
-      <Filter>Source Files\hometasks</Filter>
+    <ClInclude Include="Func.h">
+      <Filter>Step_project\Hometask9</Filter>
+    </ClInclude>
+    <ClInclude Include="function.h">
+      <Filter>Step_project\Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="hometask9.cpp">
+      <Filter>Step_project\Hometask9</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
